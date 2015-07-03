@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 use Test::More;
-use Test::CChecker;
+use Test::CChecker 0.06;
 use Alien::Hunspell;
 
 plan tests => 1;
