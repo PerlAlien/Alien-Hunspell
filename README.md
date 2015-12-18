@@ -46,7 +46,7 @@ from the Internet and install it for you.  It uses [Alien::Base](https://metacpa
 
 # AUTHOR
 
-Graham Ollis <plicease@cpan.org>
+Graham Ollis &lt;plicease@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
