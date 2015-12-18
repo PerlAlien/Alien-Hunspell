@@ -1,4 +1,4 @@
-# Alien::Hunspell
+# Alien::Hunspell [![Build Status](https://secure.travis-ci.org/plicease/Alien-Hunspell.png)](http://travis-ci.org/plicease/Alien-Hunspell)
 
 Install hunspell
 
