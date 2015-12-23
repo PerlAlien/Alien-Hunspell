@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.02_01   2015-12-22 22:53:16 -0700
+  - Build on windows
+
 0.02      2015-07-03 10:09:00 -0400
   - Bump required version of Test::CChecker
 
