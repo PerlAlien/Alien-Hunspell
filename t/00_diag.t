@@ -13,6 +13,7 @@ $modules{$_} = $_ for qw(
   Alien::Base
   Alien::patch
   File::ShareDir
+  Test::CChecker
   Test::More
   parent
 );

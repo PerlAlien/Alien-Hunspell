@@ -3,11 +3,13 @@ use warnings;
 use Test::More;
 use Alien::Hunspell;
 use Text::ParseWords qw( shellwords );
+use Test::CChecker 0.07;
+#use ExtUtils::CppGuess;
 
-BEGIN {
-  plan skip_all => 'test requires Test::CChecker 0.07 and ExtUtils::CppGuess'
-    unless eval q{ use Test::CChecker 0.07; use ExtUtils::CppGuess; 1 }
-}
+#BEGIN {
+#  plan skip_all => 'test requires Test::CChecker 0.07 and ExtUtils::CppGuess'
+#    unless eval q{ use Test::CChecker 0.07; use ExtUtils::CppGuess; 1 }
+#}
 
 plan tests => 2;
 
@@ -15,9 +17,9 @@ compile_output_to_note;
 
 compile_with_alien 'Alien::Hunspell';
 
-my %cppguess = ExtUtils::CppGuess->new->module_build_options;
-cc->push_extra_compiler_flags(shellwords $cppguess{extra_compiler_flags});
-cc->push_extra_linker_flags(shellwords $cppguess{extra_linker_flags});
+#my %cppguess = ExtUtils::CppGuess->new->module_build_options;
+#cc->push_extra_compiler_flags(shellwords $cppguess{extra_compiler_flags});
+#cc->push_extra_linker_flags(shellwords $cppguess{extra_linker_flags});
 
 my $source = do { local $/; <DATA> };
 
