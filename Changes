@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.02_02   2015-12-23 20:01:41 -0700
   - Better C++ diagnostics
   - Compile test is mandatory (t/compile.t) but
     the link/run stage is not mandatory because
