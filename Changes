@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.02_03   2015-12-24 11:02:40 -0700
+  - Clean up dynamic libraries from old installs
+
 0.02_02   2015-12-23 20:01:41 -0700
   - Better C++ diagnostics
   - Compile test is mandatory (t/compile.t) but
