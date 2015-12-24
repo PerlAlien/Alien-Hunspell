@@ -1,6 +1,12 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Better C++ diagnostics
+  - Compile test is mandatory (t/compile.t) but
+    the link/run stage is not mandatory because
+    C++ support in Test::CChecker is flaky, and
+    doesn't resemble how Alien::Hunspell is used
+    in practice anyway.
 
 0.02_01   2015-12-22 22:53:16 -0700
   - Build on windows

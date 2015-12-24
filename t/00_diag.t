@@ -13,12 +13,24 @@ $modules{$_} = $_ for qw(
   Alien::Base
   Alien::patch
   File::ShareDir
-  Test::CChecker
   Test::More
   parent
 );
 
-
+$post_diag = sub
+{
+  eval {
+    require Alien::Hunspell;
+    diag 'Alien::Hunspell->cflags = ' . Alien::Hunspell->cflags;
+    diag 'Alien::Hunspell->libs   = ' . Alien::Hunspell->libs;
+  };
+  eval {
+    require ExtUtils::CppGuess;
+    my %cppguess = ExtUtils::CppGuess->new->module_build_options;
+    diag 'C++ Guess compiler      = ' . $cppguess{extra_compiler_flags};
+    diag 'C++ Guess linker        = ' . $cppguess{extra_linker_flags};
+  };
+};
 
 my @modules = sort keys %modules;
 
