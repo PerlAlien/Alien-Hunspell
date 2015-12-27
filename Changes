@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.03      2015-12-26 17:07:31 -0700
+  - Production release identical to 0.02_03
+
 0.02_03   2015-12-24 11:02:40 -0700
   - Clean up dynamic libraries from old installs
 
