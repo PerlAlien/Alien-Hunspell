@@ -1,0 +1,31 @@
+diff --git a/src/hunspell/hunspell.cxx b/src/hunspell/hunspell.cxx
+index 4b8ab25..ddfbc4a 100644
+--- a/src/hunspell/hunspell.cxx
++++ b/src/hunspell/hunspell.cxx
+@@ -2107,6 +2107,11 @@ void Hunspell_destroy(Hunhandle *pHunspell)
+         delete (Hunspell*)(pHunspell);
+ }
+ 
++int Hunspell_add_dic(Hunhandle *pHunspell, const char *dpath)
++{
++        return ((Hunspell*)pHunspell)->add_dic(dpath);
++}
++
+ int Hunspell_spell(Hunhandle *pHunspell, const char *word)
+ {
+         return ((Hunspell*)pHunspell)->spell(word);
+diff --git a/src/hunspell/hunspell.h b/src/hunspell/hunspell.h
+index 81a5201..dbdbc1b 100644
+--- a/src/hunspell/hunspell.h
++++ b/src/hunspell/hunspell.h
+@@ -56,6 +56,10 @@ LIBHUNSPELL_DLL_EXPORTED Hunhandle *Hunspell_create_key(const char * affpath, co
+ 
+ LIBHUNSPELL_DLL_EXPORTED void Hunspell_destroy(Hunhandle *pHunspell);
+ 
++/* load extra dictionaries (only dic files) 
++ * output: 0 = additional dictionary slots available, 1 = slots are now full*/
++LIBHUNSPELL_DLL_EXPORTED int Hunspell_add_dic(Hunhandle *pHunspell, const char *dpath);
++
+ /* spell(word) - spellcheck word
+  * output: 0 = bad word, not 0 = good word
+  */
