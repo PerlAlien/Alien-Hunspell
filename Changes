@@ -4,6 +4,9 @@ Revision history for {{$dist->name}}
   - Apply patch to expose add_dic via the C interface
     https://github.com/hunspell/hunspell/pull/355
     optionally used by Text::Hunspell::FFI
+  - Included additional Test::Alien based tests.
+    These are required for dev releases, but may
+    be optional (for now) on production releases.
 
 0.03      2015-12-26 17:07:31 -0700
   - Production release identical to 0.02_03

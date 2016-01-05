@@ -12,9 +12,12 @@ my $post_diag;
 $modules{$_} = $_ for qw(
   Alien::Base
   Alien::patch
+  ExtUtils::CBuilder
   File::ShareDir
+  Test::Alien
   Test::CChecker
   Test::More
+  Test::Stream
   parent
 );
 
