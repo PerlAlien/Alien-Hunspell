@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Use attach instead of function in t/ffi.t to see
+    if it is more reliable.
 
 0.03_02   2016-01-05 11:19:07 -0500
 

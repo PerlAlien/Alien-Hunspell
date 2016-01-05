@@ -14,13 +14,13 @@ ffi_ok { symbols => [qw( Hunspell_create Hunspell_destroy )] }, with_subtest {
   plan 2;
   
   
-  my $ptr = $ffi
-    ->function(Hunspell_create => ['string','string'] => 'opaque')
-    ->call("t/supp.aff", "t/supp.dic");
+  $ffi->attach(Hunspell_create => ['string','string'] => 'opaque');
+  my $ptr = Hunspell_create("t/supp.aff", "t/supp.dic");
   
   ok $ptr, "ptr = $ptr";
   
-  $ffi->function(Hunspell_destroy => ['opaque'] => 'void')->call($ptr);
+  $ffi->attach(Hunspell_destroy => ['opaque'] => 'void');
+  Hunspell_destroy($ptr);
   
   ok 1, "did not crash";
 };
