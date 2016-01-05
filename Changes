@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.03_01   2016-01-04 20:44:08 -0500
   - Apply patch to expose add_dic via the C interface
     https://github.com/hunspell/hunspell/pull/355
     optionally used by Text::Hunspell::FFI
