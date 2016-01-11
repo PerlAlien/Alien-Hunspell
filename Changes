@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.03_04   2016-01-11 03:56:44 -0500
   - Fixes to produce dynamic libraries on FreeBSD10.x
   - Fixes for more robust dynamic library scanning
   - Require Alien::Base 0.024 on Windows
