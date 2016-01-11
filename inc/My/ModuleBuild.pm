@@ -26,6 +26,9 @@ sub new
       : 'cp %{ltbase}/bin/libtool libtool';
     
     push @{ $args{alien_build_commands} }, $cmd, $make;
+    
+    $args{configure_requires}->{'Alien::Base'} = '0.024';
+    $args{requires}->{'Alien::Base'} = '0.024';
   }
   else
   {

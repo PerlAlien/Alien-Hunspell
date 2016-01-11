@@ -1,6 +1,10 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Fixes to produce dynamic libraries on FreeBSD10.x
+  - Fixes for more robust dynamic library scanning
+  - Require Alien::Base 0.024 on Windows
+    (for https://github.com/Perl5-Alien/Alien-Base/pull/139)
 
 0.03_03   2016-01-05 13:17:30 -0500
   - Use attach instead of function in t/ffi.t to see
