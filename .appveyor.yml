@@ -12,7 +12,7 @@ install:
   - cpanm -n Dist::Zilla
   - dzil authordeps --missing | cpanm -n
   - dzil listdeps --missing | cpanm -n
-  - cpanm Alien::MSYS
+  - cpanm -n Alien::MSYS Alien::libtool24
 
 build: off
 
