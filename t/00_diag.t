@@ -13,6 +13,7 @@ $modules{$_} = $_ for qw(
   Alien::Base
   Alien::patch
   ExtUtils::CBuilder
+  FFI::CheckLib
   File::ShareDir
   Test::Alien
   Test::CChecker
@@ -25,8 +26,9 @@ $post_diag = sub
 {
   eval {
     require Alien::Hunspell;
-    diag 'Alien::Hunspell->cflags = ' . Alien::Hunspell->cflags;
-    diag 'Alien::Hunspell->libs   = ' . Alien::Hunspell->libs;
+    diag 'Alien::Hunspell->cflags       = ' . Alien::Hunspell->cflags;
+    diag 'Alien::Hunspell->libs         = ' . Alien::Hunspell->libs;
+    diag 'Alien::Hunspell->dynamic_libs = ', $_ for Alien::Hunspell->dynamic_libs;
   };
   eval {
     require ExtUtils::CppGuess;

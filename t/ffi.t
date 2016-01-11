@@ -4,9 +4,14 @@ use Test::Stream -V1;
 use Test::Alien;
 use Alien::Hunspell;
 
+skip_all 'no dynamic libs' unless Alien::Hunspell->dynamic_libs;
+
 plan 3;
 
 alien_ok 'Alien::Hunspell';
+
+note "libs:";
+note "  - $_" for Alien::Hunspell->dynamic_libs;
 
 ffi_ok { symbols => [qw( Hunspell_create Hunspell_destroy )] }, with_subtest {
   my($ffi) = @_;
