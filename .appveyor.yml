@@ -16,12 +16,12 @@ install:
 build: off
 
 test_script:
-  - dzil install -v --install-command 'cpanm -v .'
-  - cpanm -v Text::Hunspell::FFI
+  - dzil test -v
 
+#  - cpanm -v Text::Hunspell::FFI
 # waiting for https://github.com/cosimo/perl5-text-hunspell/pull/11
 # before we use the CPAN version
-  - cpanm -v https://github.com/cosimo/perl5-text-hunspell/archive/master.zip
+#  - cpanm -v https://github.com/cosimo/perl5-text-hunspell/archive/master.zip
 
 cache:
   - C:\Perl5
