@@ -1,4 +1,4 @@
-# Alien::Hunspell [![Build Status](https://secure.travis-ci.org/plicease/Alien-Hunspell.png)](http://travis-ci.org/plicease/Alien-Hunspell)
+# Alien::Hunspell [![Build Status](https://secure.travis-ci.org/plicease/Alien-Hunspell.png)](http://travis-ci.org/plicease/Alien-Hunspell) [![Build status](https://ci.appveyor.com/api/projects/status/u2sbefws5nbiyjbj/branch/master?svg=true)](https://ci.appveyor.com/project/plicease/Alien-Hunspell/branch/master)
 
 Install hunspell
 
