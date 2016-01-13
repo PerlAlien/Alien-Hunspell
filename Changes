@@ -1,9 +1,11 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.04      2016-01-13 00:14:21 -0500
   - Test::Alien and Test::Stream are optional test
     dependencies for the production version
-  - Otherwise identical
+  - Otherwise identical to 0.03_04
 
 0.03_04   2016-01-11 03:56:44 -0500
   - Fixes to produce dynamic libraries on FreeBSD10.x
