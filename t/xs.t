@@ -1,5 +1,12 @@
 use strict;
 use warnings;
+BEGIN {
+  unless(eval { require Test::Alien; require Test::Stream; 1 })
+  {
+    require Test::More;
+    Test::More::plan(skip_all => 'Test requires Test::Alien and Test::Stream');
+  }
+}
 use Test::Stream -V1;
 use Test::Alien;
 use Alien::Hunspell;
