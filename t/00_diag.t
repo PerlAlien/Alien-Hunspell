@@ -11,6 +11,7 @@ my $post_diag;
 
 $modules{$_} = $_ for qw(
   Alien::Base
+  Alien::Base::ModuleBuild
   Alien::patch
   ExtUtils::CBuilder
   FFI::CheckLib
