@@ -29,6 +29,19 @@ sub new
     $args{configure_requires}->{'Alien::Base'} = '0.024';
     $args{requires}->{'Alien::Base'} = '0.024';
   }
+  elsif($^O eq 'freebsd')
+  {
+    $args{alien_helper}->{star} = q{
+      join " ", File::Glob::bsd_glob("*")
+    };
+    unshift @{ $args{alien_build_commands} }, 
+      '%{patch} -p1 < ../../patches/freebsd-configure.diff',
+      '%{patch} -p1 < ../../patches/freebsd-autotools.diff',
+      # trick autotools into thinking that they do
+      # not need to regenerate (which is true)
+      'rm -f compile',
+      'touch %{star}';
+  }
   
   my $self = $class->SUPER::new(%args);
   $self;
