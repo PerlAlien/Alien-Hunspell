@@ -9,7 +9,6 @@ sub new
 {
   my($class, %args) = @_;
 
-  #if($^O eq 'MSWin32' || $^O eq 'solaris')
   if($^O eq 'MSWin32')
   {
     $args{alien_bin_requires}->{'Alien::libtool24'} = '0.02';
@@ -29,10 +28,6 @@ sub new
     
     $args{configure_requires}->{'Alien::Base'} = '0.024';
     $args{requires}->{'Alien::Base'} = '0.024';
-  }
-  else
-  {
-    $args{alien_helper} = {};
   }
   
   my $self = $class->SUPER::new(%args);
