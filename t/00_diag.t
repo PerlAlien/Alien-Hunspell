@@ -16,10 +16,8 @@ $modules{$_} = $_ for qw(
   ExtUtils::CBuilder
   FFI::CheckLib
   File::ShareDir
-  Test::Alien
   Test::CChecker
   Test::More
-  Test::Stream
   parent
 );
 

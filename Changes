@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - prune t/xs.t and t/ffi.t experimental tests
 
 0.06      2016-01-29 09:57:23 -0500
   - Fixed metadata bug where bin_requires were included
