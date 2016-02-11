@@ -10,7 +10,7 @@ install:
   - perlbrew list
   - dzil authordeps --missing | cpanm -n
   - dzil listdeps --missing | cpanm -n
-  - cpanm Test::Alien
+  - dzil aliendeps --env | cpanm -n
 
 perl:
   - "5.8"
@@ -23,8 +23,8 @@ perl:
   - "5.22"
 
 env:
-  - ALIEN_FORCE=1
-  - ALIEN_FORCE=0
+  - ALIEN_INSTALL_TYPE=system
+  - ALIEN_INSTALL_TYPE=share
 
 # TODO: add Text::Hunspell to the test for goodness
 script:
