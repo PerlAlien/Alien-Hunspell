@@ -1,8 +1,11 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.08      2017-02-12 16:13:14 -0500
   - Upgrade hunspell to 1.3.4
   - Switch from sourceforge to github as the source
+  - Require Alien::Base 0.32 for better SSL workage
 
 0.07      2016-02-05 23:06:50 -0500
   - prune t/xs.t and t/ffi.t experimental tests
