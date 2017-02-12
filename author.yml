@@ -5,6 +5,14 @@ pod_spelling_system:
   # (regardless of what spell check thinks)
   stopwords:
     - hunspell
+    - Lingucomponent
+    - aff
+    - bylocale
+    - ispell
+    - latin
+    - mydict
+    - myspell
+    - wc
 
 pod_coverage:
   skip: 1
