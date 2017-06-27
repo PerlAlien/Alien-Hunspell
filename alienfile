@@ -1,0 +1,27 @@
+use alienfile;
+
+plugin 'PkgConfig' => (
+  pkg_name => 'hunspell',
+);
+ 
+share {
+  
+  requires 'Alien::autoconf' => '0.02';
+  requires 'Alien::automake' => '0.02';
+  requires 'Alien::libtool'  => '0.02';
+  
+  plugin 'Download' => (
+    url => 'https://github.com/hunspell/hunspell/releases',
+    version => qr/^v([0-9\.]+)\.tar\.gz$/,
+  );
+
+  plugin 'Extract' => 'tar.gz';
+  plugin 'Build::Autoconf' => ();
+
+  build [
+    'autoreconf -vfi',
+    '%{configure}',
+    '%{make}',
+    '%{make} install',
+  ];
+};
