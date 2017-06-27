@@ -6,7 +6,7 @@ plugin 'PkgConfig' => (
  
 share {
 
-  requires 'Alien::Build'    => '0.50';  
+  #requires 'Alien::Build'    => '0.50';
   requires 'Alien::autoconf' => '0.02';
   requires 'Alien::automake' => '0.02';
   requires 'Alien::libtool'  => '0.02';
@@ -19,9 +19,12 @@ share {
   plugin 'Extract' => 'tar.gz';
   plugin 'Build::Autoconf' => ();
 
+  my @acflags;
+  unshift @acflags, '--disable-nls' if $^O eq 'MSWin32';
+
   build [
-    'autoreconf -vfi',
-    '%{configure}',
+    [ 'sh', -c => 'autoreconf -vfi' ],
+    "%{configure} @acflags",
     '%{make}',
     '%{make} install',
   ];
