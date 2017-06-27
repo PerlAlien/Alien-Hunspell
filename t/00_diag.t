@@ -15,11 +15,9 @@ $modules{$_} = $_ for qw(
   Alien::Build::MM
   Alien::Build::Plugin::Build::Autoconf
   Config
-  ExtUtils::CBuilder
   ExtUtils::MakeMaker
   Test2::V0
   Test::Alien
-  Test::CChecker
   Test::More
   parent
 );
