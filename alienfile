@@ -6,7 +6,7 @@ plugin 'PkgConfig' => (
  
 share {
 
-  #requires 'Alien::Build'    => '0.50';
+  #requires 'Alien::Build'    => '0.51';
   requires 'Alien::autoconf' => '0.02';
   requires 'Alien::automake' => '0.02';
   requires 'Alien::libtool'  => '0.02';
@@ -20,7 +20,7 @@ share {
   plugin 'Build::Autoconf' => ();
 
   my @acflags;
-  unshift @acflags, '--disable-nls' if $^O eq 'MSWin32';
+  unshift @acflags, '--disable-nls' if $^O =~ /^(?:MSWin32|darwin|freebsd)/;
 
   build [
     [ 'sh', -c => 'autoreconf -vfi' ],
