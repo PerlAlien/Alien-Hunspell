@@ -1,19 +1,6 @@
-use strict;
-use warnings;
-BEGIN {
-  unless(eval { require Test::Alien; require Test::Stream; 1 })
-  {
-    require Test::More;
-    Test::More::plan(skip_all => 'Test requires Test::Alien and Test::Stream');
-  }
-}
-use Test::Stream -V1;
+use Test2::V0;
 use Test::Alien;
 use Alien::Hunspell;
-
-skip_all 'no dynamic libs' unless Alien::Hunspell->dynamic_libs;
-
-plan 3;
 
 alien_ok 'Alien::Hunspell';
 
@@ -37,3 +24,5 @@ ffi_ok { symbols => [qw( Hunspell_create Hunspell_destroy )] }, with_subtest {
   ok 1, "did not crash";
 };
 
+
+done_testing;

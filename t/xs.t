@@ -1,17 +1,6 @@
-use strict;
-use warnings;
-BEGIN {
-  unless(eval { require Test::Alien; require Test::Stream; 1 })
-  {
-    require Test::More;
-    Test::More::plan(skip_all => 'Test requires Test::Alien and Test::Stream');
-  }
-}
-use Test::Stream -V1;
+use Test2::V0;
 use Test::Alien;
 use Alien::Hunspell;
-
-plan 3;
 
 alien_ok 'Alien::Hunspell';
 
@@ -27,12 +16,14 @@ todo 'C++ is hard', sub {
   };
 };
 
+done_testing;
+
 __DATA__
 
 #include "EXTERN.h"
 #include "perl.h"
 #include "XSUB.h"
-#include <hunspell/hunspell.h>
+#include <hunspell.h>
 
 MODULE = My::Hunspell PACKAGE = My::Hunspell
 

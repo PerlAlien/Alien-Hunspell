@@ -11,11 +11,14 @@ my $post_diag;
 
 $modules{$_} = $_ for qw(
   Alien::Base
-  Alien::Base::ModuleBuild
-  Alien::patch
+  Alien::Build
+  Alien::Build::MM
+  Alien::Build::Plugin::Build::Autoconf
+  Config
   ExtUtils::CBuilder
-  FFI::CheckLib
-  File::ShareDir
+  ExtUtils::MakeMaker
+  Test2::V0
+  Test::Alien
   Test::CChecker
   Test::More
   parent
