@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.09_01   2017-06-27 15:10:56 -0400
   - migrate to Alien::Build
   - build from latest production source when building from source
   - numerous build fixes for OS X, FreeBSD, Strawberry
