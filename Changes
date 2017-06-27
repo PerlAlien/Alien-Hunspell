@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Enable disabled test t/xs.t
 
 0.09_01   2017-06-27 15:10:56 -0400
   - migrate to Alien::Build
