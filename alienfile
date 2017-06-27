@@ -5,7 +5,8 @@ plugin 'PkgConfig' => (
 );
  
 share {
-  
+
+  requires 'Alien::Build'    => '0.50';  
   requires 'Alien::autoconf' => '0.02';
   requires 'Alien::automake' => '0.02';
   requires 'Alien::libtool'  => '0.02';
