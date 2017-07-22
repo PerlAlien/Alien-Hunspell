@@ -3,6 +3,8 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+unset ALIEN_INSTALL_TYPE
+
 rm -rf /tmp/Alien-Build /tmp/Alien-Autotools
 
 cpanm -n Dist::Zilla
