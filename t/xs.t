@@ -34,3 +34,5 @@ Hunspell_create(affpath, dpath);
 void
 Hunspell_destroy(handle);
     void *handle;
+  CODE:
+    Hunspell_destroy((Hunhandle*) handle);
