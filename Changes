@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - use Alien::Autotools in share build
 
 0.10      2017-07-07 03:22:40 -0400
 
