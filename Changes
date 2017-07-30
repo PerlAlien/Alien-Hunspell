@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.11      2017-07-30 07:16:30 -0400
   - use Alien::Autotools in share build
   - Only run xs test on development releases
     (Test::Alien support for C++ seems to need some work)
