@@ -6,8 +6,8 @@ plugin 'PkgConfig' => (
  
 share {
 
-  requires 'Alien::Build'     => '0.71';
-  requires 'Alien::Autotools' => '0.99';
+  requires 'Alien::Build'     => '0.75';
+  requires 'Alien::Autotools' => '1.02';
   
   plugin 'Download' => (
     url => 'https://github.com/hunspell/hunspell/releases',
