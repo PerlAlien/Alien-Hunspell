@@ -2,7 +2,7 @@ package Alien::Hunspell;
 
 use strict;
 use warnings;
-use parent 'Alien::Base';
+use base 'Alien::Base';
 
 # ABSTRACT: Install hunspell
 # VERSION
