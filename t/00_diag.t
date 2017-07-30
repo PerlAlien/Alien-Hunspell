@@ -15,6 +15,8 @@ $modules{$_} = $_ for qw(
   Alien::Build::MM
   Alien::Build::Plugin::Build::Autoconf
   ExtUtils::MakeMaker
+  Path::Tiny
+  Test2::Require
   Test2::V0
   Test::Alien
 );
