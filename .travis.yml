@@ -8,7 +8,7 @@ addons:
 
 install:
   - perlbrew list
-  - ./maint/travis-install-alienbuild
+  - ./maint/travis-install-mods
   - cpanm -n App::af
   - af missing | cpanm -n
   - dzil authordeps --missing | cpanm -n
