@@ -9,7 +9,7 @@ alien_ok 'Alien::Hunspell';
 my $xs = do { local $/; <DATA> };
 
 xs_ok { xs => $xs, verbose => 1, cpp => 1 }, with_subtest {
-  my $ptr = My::Hunspell::Hunspell_create("t/supp.aff","t/supp.dic");
+  my $ptr = My::Hunspell::Hunspell_create("corpus/supp.aff","corpus/supp.dic");
   ok $ptr, "ptr = $ptr";
   My::Hunspell::Hunspell_destroy($ptr);
   ok 1, "did not crash";

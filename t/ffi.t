@@ -16,7 +16,7 @@ ffi_ok { symbols => [qw( Hunspell_create Hunspell_destroy )] }, with_subtest {
   
   
   $ffi->attach(Hunspell_create => ['string','string'] => 'opaque');
-  my $ptr = Hunspell_create("t/supp.aff", "t/supp.dic");
+  my $ptr = Hunspell_create("corpus/supp.aff", "corpus/supp.dic");
   
   ok $ptr, "ptr = $ptr";
   
