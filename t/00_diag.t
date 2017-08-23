@@ -1,4 +1,4 @@
-use Test2::V0;
+use Test2::V0 -no_srand => 1;
 use Config;
 
 eval q{ require Test::More };
@@ -14,11 +14,12 @@ $modules{$_} = $_ for qw(
   Alien::Build
   Alien::Build::MM
   Alien::Build::Plugin::Build::Autoconf
+  ExtUtils::CppGuess
   ExtUtils::MakeMaker
   Path::Tiny
   Test2::Require
   Test2::V0
-  Test::Alien
+  Test::Alien::CPP
 );
 
 $post_diag = sub

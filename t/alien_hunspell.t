@@ -1,5 +1,5 @@
 use Test2::V0 -no_srand => 1;
-use Test::Alien;
+use Test::Alien::CPP;
 use Alien::Hunspell;
 use lib 't/lib';
 use Test2::Require::Dev;
@@ -10,7 +10,7 @@ subtest 'xs' => sub {
 
   my $xs = do { local $/; <DATA> };
 
-  xs_ok { xs => $xs, verbose => 1, cpp => 1 }, with_subtest {
+  xs_ok { xs => $xs, verbose => 1 }, with_subtest {
     my $ptr = My::Hunspell::Hunspell_create("corpus/supp.aff","corpus/supp.dic");
     ok $ptr, "ptr = $ptr";
     My::Hunspell::Hunspell_destroy($ptr);
