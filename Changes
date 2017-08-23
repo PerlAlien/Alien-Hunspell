@@ -2,6 +2,8 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.12_02   2017-08-23 07:15:07 -0400
+
 0.12_01   2017-07-30 07:25:56 -0400
   - Development release identical to 0.11 release
 
