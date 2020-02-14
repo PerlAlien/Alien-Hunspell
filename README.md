@@ -6,45 +6,51 @@ Install hunspell
 
 In your Build.PL:
 
-    use Module::Build;
-    use Alien::Hunspell;
-    my $builder = Module::Build->new(
-      ...
-      configure_requires => {
-        'Alien::Hunspell' => '0',
-        ...
-      },
-      extra_compiler_flags => Alien::Hunspell->cflags,
-      extra_linker_flags   => Alien::Hunspell->libs,
-      ...
-    );
-    
-    $build->create_build_script;
+```perl
+use Module::Build;
+use Alien::Hunspell;
+my $builder = Module::Build->new(
+  ...
+  configure_requires => {
+    'Alien::Hunspell' => '0',
+    ...
+  },
+  extra_compiler_flags => Alien::Hunspell->cflags,
+  extra_linker_flags   => Alien::Hunspell->libs,
+  ...
+);
+
+$build->create_build_script;
+```
 
 In your Makefile.PL:
 
-    use ExtUtils::MakeMaker;
-    use Config;
-    use Alien::Hunspell;
-    
-    WriteMakefile(
-      ...
-      CONFIGURE_REQUIRES => {
-        'Alien::Hunspell' => '0',
-      },
-      CCFLAGS => Alien::Hunspell->cflags . " $Config{ccflags}",
-      LIBS    => [ Alien::Hunspell->libs ],
-      ...
-    );
+```perl
+use ExtUtils::MakeMaker;
+use Config;
+use Alien::Hunspell;
+
+WriteMakefile(
+  ...
+  CONFIGURE_REQUIRES => {
+    'Alien::Hunspell' => '0',
+  },
+  CCFLAGS => Alien::Hunspell->cflags . " $Config{ccflags}",
+  LIBS    => [ Alien::Hunspell->libs ],
+  ...
+);
+```
 
 In your [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus) script or module:
 
-    use FFI::Platypus;
-    use Alien::Hunspell;
-    
-    my $ffi = FFI::Platypus->new(
-      lib => [ Alien::Hunspell->dynamic_libs ],
-    );
+```perl
+use FFI::Platypus;
+use Alien::Hunspell;
+
+my $ffi = FFI::Platypus->new(
+  lib => [ Alien::Hunspell->dynamic_libs ],
+);
+```
 
 # DESCRIPTION
 
