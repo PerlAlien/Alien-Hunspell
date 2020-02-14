@@ -10,8 +10,8 @@ use base 'Alien::Base';
 
 =head1 DESCRIPTION
 
-This module provides the spelling library Hunspell.  It will either 
-detect it as provided by the operating system, or download the source 
+This module provides the spelling library Hunspell.  It will either
+detect it as provided by the operating system, or download the source
 from the Internet and install it for you.  It uses L<Alien::Base>.
 
 =cut
