@@ -1,4 +1,4 @@
-# Alien::Hunspell [![Build Status](https://secure.travis-ci.org/plicease/Alien-Hunspell.png)](http://travis-ci.org/plicease/Alien-Hunspell) ![macos-share](https://github.com/plicease/Alien-Hunspell/workflows/macos-share/badge.svg) ![macos-system](https://github.com/plicease/Alien-Hunspell/workflows/macos-system/badge.svg)
+# Alien::Hunspell [![Build Status](https://secure.travis-ci.org/Perl5-Alien/Alien-Hunspell.png)](http://travis-ci.org/Perl5-Alien/Alien-Hunspell) ![macos-share](https://github.com/Perl5-Alien/Alien-Hunspell/workflows/macos-share/badge.svg) ![macos-system](https://github.com/Perl5-Alien/Alien-Hunspell/workflows/macos-system/badge.svg)
 
 Install hunspell
 
