@@ -1,4 +1,4 @@
-# Alien::Hunspell [![Build Status](https://secure.travis-ci.org/plicease/Alien-Hunspell.png)](http://travis-ci.org/plicease/Alien-Hunspell) [![Build status](https://ci.appveyor.com/api/projects/status/u2sbefws5nbiyjbj/branch/master?svg=true)](https://ci.appveyor.com/project/plicease/Alien-Hunspell/branch/master)
+# Alien::Hunspell [![Build Status](https://secure.travis-ci.org/plicease/Alien-Hunspell.png)](http://travis-ci.org/plicease/Alien-Hunspell)
 
 Install hunspell
 
@@ -54,8 +54,8 @@ my $ffi = FFI::Platypus->new(
 
 # DESCRIPTION
 
-This module provides the spelling library Hunspell.  It will either 
-detect it as provided by the operating system, or download the source 
+This module provides the spelling library Hunspell.  It will either
+detect it as provided by the operating system, or download the source
 from the Internet and install it for you.  It uses [Alien::Base](https://metacpan.org/pod/Alien::Base).
 
 # AUTHOR
