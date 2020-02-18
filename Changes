@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.15      2020-02-18 10:57:19 -0500
+  - Blacklist 1.7.0 on Windows only, where it seems to be broken (gh#8)
+
 0.14_01   2020-02-17 18:22:35 -0500
   - Diagnostic release
 
