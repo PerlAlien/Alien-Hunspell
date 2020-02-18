@@ -9,6 +9,8 @@ share {
   requires 'Alien::Build'     => '0.75';
   requires 'Alien::Autotools' => '1.02';
 
+  plugin 'Prefer::BadVersion' => ['1.7.0'] if $^O eq 'MSWin32';
+
   plugin 'Download' => (
     url => 'https://github.com/hunspell/hunspell/releases',
     version => qr/^v([0-9\.]+)\.tar\.gz$/,
