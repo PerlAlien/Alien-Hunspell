@@ -14,7 +14,6 @@ $modules{$_} = $_ for qw(
   Alien::Build
   Alien::Build::MM
   Alien::Build::Plugin::Build::Autoconf
-  Alien::Build::Plugin::Prefer::BadVersion
   Alien::Build::Plugin::Probe::Vcpkg
   ExtUtils::CppGuess
   ExtUtils::MakeMaker
