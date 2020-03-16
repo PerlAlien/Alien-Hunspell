@@ -4,41 +4,38 @@ Install hunspell
 
 # SYNOPSIS
 
+In your Makefile.PL:
+
+```perl
+use ExtUtils::MakeMaker;
+use Alien::Base::Wrapper ();
+
+WriteMakefile(
+  Alien::Base::Wrapper->new('Alien::Hunspell')->mm_args2(
+    # MakeMaker args
+    NAME => 'Kafka::Librd',
+    ...
+  ),
+);
+```
+
 In your Build.PL:
 
 ```perl
 use Module::Build;
-use Alien::Hunspell;
+use Alien::Base::Wrapper qw( Alien::Hunspell !export );
+
 my $builder = Module::Build->new(
   ...
   configure_requires => {
     'Alien::Hunspell' => '0',
     ...
   },
-  extra_compiler_flags => Alien::Hunspell->cflags,
-  extra_linker_flags   => Alien::Hunspell->libs,
+  Alien::Base::Wrapper->mb_args,
   ...
 );
 
 $build->create_build_script;
-```
-
-In your Makefile.PL:
-
-```perl
-use ExtUtils::MakeMaker;
-use Config;
-use Alien::Hunspell;
-
-WriteMakefile(
-  ...
-  CONFIGURE_REQUIRES => {
-    'Alien::Hunspell' => '0',
-  },
-  CCFLAGS => Alien::Hunspell->cflags . " $Config{ccflags}",
-  LIBS    => [ Alien::Hunspell->libs ],
-  ...
-);
 ```
 
 In your [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus) script or module:
