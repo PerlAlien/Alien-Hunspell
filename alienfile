@@ -15,10 +15,12 @@ share {
 
   plugin 'Prefer::BadVersion' => ['1.7.0'] if $^O eq 'MSWin32';
 
+  my $version = $^O eq 'MSWin32' ? '1.6.2.1' : '1.7.0.1';
+
   plugin 'Download' => (
     # trying to autoreconf + patch + whatnot hunspell has jus become too much
     # trouble, so we're using a prepatched copy that already has been autoreconf'd
-    url => 'https://github.com/PerlAlien/hunspell/archive/alien-1.7.0.1.tar.gz',
+    url => "https://github.com/PerlAlien/hunspell/archive/alien-$version.tar.gz",
     version => qr/^([0-9\.]+)\\.[0-9]+.tar\.gz$/,
   );
 
