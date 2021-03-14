@@ -16,5 +16,5 @@ if echo $CIP_ENV | grep -q system; then
 else
   echo use internet libhunspell
   cip sudo apt-get update
-  cip sudo apt-get -y install g++ autopoint
+  cip sudo apt-get -y install g++
 fi
