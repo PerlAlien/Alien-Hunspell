@@ -1,4 +1,4 @@
-# Alien::Hunspell ![linux](https://github.com/PerlAlien/Alien-Hunspell/workflows/linux/badge.svg) ![macos](https://github.com/PerlAlien/Alien-Hunspell/workflows/macos/badge.svg) ![windows](https://github.com/PerlAlien/Alien-Hunspell/workflows/windows/badge.svg) ![msys2-mingw](https://github.com/PerlAlien/Alien-Hunspell/workflows/msys2-mingw/badge.svg)
+# Alien::Hunspell ![linux](https://github.com/PerlAlien/Alien-Hunspell/workflows/linux/badge.svg) ![macos](https://github.com/PerlAlien/Alien-Hunspell/workflows/macos/badge.svg) ![windows](https://github.com/PerlAlien/Alien-Hunspell/workflows/windows/badge.svg)
 
 Install hunspell
 
